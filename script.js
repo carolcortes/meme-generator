@@ -1,5 +1,6 @@
 console.log('Olá, mundo!');
 const imgContainer = document.getElementById('meme-image-container');
+const img = document.getElementById('meme-image');
 
 function inputText() {
   const input = document.getElementById('text-input');
@@ -11,7 +12,6 @@ function inputText() {
 
 function addImage(event) {
   const myEvent = event;
-  const img = document.getElementById('meme-image');
   img.src = URL.createObjectURL(myEvent.target.files[0]);
   img.onload = () => {
     URL.revokeObjectURL(img.src);
@@ -41,13 +41,16 @@ function earthButton() {
 
 function preMeme() {
   const meme = document.querySelectorAll('.meme');
-  const img = document.getElementById('meme-image');
   meme.forEach((index) => {
     index.addEventListener('click', (event) => {
       const myEvent = event;
       img.src = myEvent.target.src;
     });
   });
+}
+
+if (img.files) {
+  addImage();
 }
 
 window.onload = () => {
