@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Project Meme Generator</title>
-</head>
-<body>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Project Meme Generator</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">MEME GENERATOR</h1>
+        </header>
+        <main>
+            <section id="user">
+                <label for="text-input">Texto:</label>
+                <input id="text-input" type="text" maxlength="60">
+                <input id="meme-insert" type="file" accept="image/*" onchange="addImage(event)">
+            </section>
+            <section id="meme-image-container">
+                <h1 id="meme-text"></h1>
+                <div id="meme-image">
+                    <img id="img">
+                </div>
+            </section>
+            <section id="border-buttons">
+                <button id="fire">FIRE</button>
+                <button id="water">WATER</button>
+                <button id="earth">EARTH</button>
+            </section>
+            <section id="image-gallery">
+                <div id="meme-1"></div>
+                <div id="meme-2"></div>
+                <div id="meme-3"></div>
+                <div id="meme-4"></div>
+            </section>
+        </main>
+        <footer></footer>
+        <script src="script.js"></script>
+    </body>
 </html>
