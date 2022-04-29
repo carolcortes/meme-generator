@@ -1,4 +1,5 @@
 console.log('Olá, mundo!');
+const imgContainer = document.getElementById('meme-image-container');
 
 function inputText() {
   const input = document.getElementById('text-input');
@@ -20,24 +21,21 @@ function addImage(event) {
 function fireButton() {
   const btn = document.getElementById('fire');
   btn.addEventListener('click', () => {
-    const img = document.getElementById('img');
-    img.style.border = '3px dashed red';
+    imgContainer.style.border = '3px dashed red';
   });
 }
 
 function waterButton() {
   const btn = document.getElementById('water');
   btn.addEventListener('click', () => {
-    const img = document.getElementById('img');
-    img.style.border = '3px double blue';
+    imgContainer.style.border = '5px double blue';
   });
 }
 
 function earthButton() {
   const btn = document.getElementById('earth');
   btn.addEventListener('click', () => {
-    const img = document.getElementById('img');
-    img.style.border = '6px groove green';
+    imgContainer.style.border = '6px groove green';
   });
 }
 
