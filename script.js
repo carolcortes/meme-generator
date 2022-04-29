@@ -11,7 +11,7 @@ function inputText() {
 
 function addImage(event) {
   const myEvent = event;
-  const img = document.getElementById('img');
+  const img = document.getElementById('meme-image');
   img.src = URL.createObjectURL(myEvent.target.files[0]);
   img.onload = () => {
     URL.revokeObjectURL(img.src);
@@ -39,9 +39,21 @@ function earthButton() {
   });
 }
 
+function preMeme() {
+  const meme = document.querySelectorAll('.meme');
+  const img = document.getElementById('meme-image');
+  meme.forEach((index) => {
+    index.addEventListener('click', (event) => {
+      const myEvent = event;
+      img.src = myEvent.target.src;
+    });
+  });
+}
+
 window.onload = () => {
   inputText();
   fireButton();
   waterButton();
   earthButton();
+  preMeme();
 };

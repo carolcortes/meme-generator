@@ -22,10 +22,9 @@ body {
   margin: 30px;
 }
 
-#img {
+#meme-image {
   width: 500px;
   height: 500px;
-
 }
 
 #border-buttons {
@@ -42,4 +41,16 @@ body {
 
 #earth {
   background-color: green;
+}
+
+#image-gallery {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+}
+
+.meme {
+  width: 100px;
+  height: 100px;
+  margin: 10px
 }
